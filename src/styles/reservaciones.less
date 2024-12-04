@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    flex: 1;
+    
+}
+
+.reservaciones {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.reservaciones h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #b09e66;
+    margin-bottom: 10px;
+}
+
+.reservaciones p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #b09e66;
+}
+
+select, input[type="date"], input[type="time"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #b09e66;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #b09e66;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d1b57b;
+}
+
+.mensaje-error {
+    color: #f55;
+    background-color: #332222;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mensaje-disponibilidad {
+    color: #fff;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.horarios-disponibles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.horario {
+    padding: 10px 15px;
+    background-color: #444;
+    border: 1px solid #b09e66;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.horario:hover {
+    background-color: #b09e66;
+    color: #fff;
+}
+
+.horario.seleccionado {
+    background-color: #d1b57b;
+    color: #fff;
+    border-color: #fff;
+}
+
+footer {
+    background-color: #b09e66;
+    padding: 20px;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.btn-reservar {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #b09e66;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    align-self: center;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-reservar:hover {
+    background-color: #d1b57b;
+}

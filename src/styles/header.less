@@ -1,0 +1,193 @@
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(176, 156, 102);
+    padding: 0px 20px;
+}
+
+.logo {
+    img {
+        width: 90px;
+        margin-left: 20px;
+    }
+}
+
+.nav-links {
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin-right: 20px;
+    }
+}
+
+.nav-links li {
+    position: relative; // Necesario para el pseudo-elemento
+}
+
+.nav-links li a {
+    text-decoration: none; // Elimina el subrayado por defecto
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease; // Transición suave para el color
+}
+
+.nav-links li a::after {
+    content: ''; // Crea un pseudo-elemento
+    position: absolute; // Posiciona el pseudo-elemento
+    left: 0; // Alinea a la izquierda
+    bottom: -5px; // Posición debajo del texto
+    width: 100%; // Ancho completo
+    height: 2px; // Altura de la línea
+    background-color: black; // Color de la línea
+    transform: scaleX(0); // Comienza con la línea oculta
+    transition: transform 0.3s ease; // Transición suave para la línea
+}
+
+.nav-links li a:hover {
+    color: azure; // Cambia el color del texto al pasar el mouse
+}
+
+.nav-links li a:hover::after {
+    transform: scaleX(1); // Muestra la línea al pasar el mouse
+}
+
+.menu-toggle {
+    display: none; // Oculta por defecto
+    margin-left: auto; // Empuja el ícono hacia la derecha
+    cursor: pointer; // Cambia el cursor al pasar por encima
+    font-size: 22px;
+    margin-right: 20px;
+}
+// Estilos para el overlay
+.overlay {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Inicia fuera de la pantalla */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(176, 156, 102, 0.9); /* Fondo semitransparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease; /* Transición suave */
+    z-index: 1000;
+    transform: translateX(100%); /* Fuera de la pantalla */
+
+    &.active {
+        display: flex; // Mostrar el overlay
+        transform: translateX(-100%); // Deslizar hacia la izquierda
+    }
+
+    .overlay-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; // Centrar horizontalmente
+        justify-content: center; // Centrar verticalmente
+        height: 100%;
+        width: 100%; // Asegúrate de que ocupe todo el ancho
+        color: black;
+        position: relative; // Para posicionar el botón de cerrar
+
+        .close-button {
+            position: absolute; // Posicionar en relación al contenedor
+            top: 27px; // Espacio desde la parte superior
+            right: 40px; // Espacio desde la derecha
+            font-size: 34px; // Tamaño de la "X"
+            cursor: pointer; // Cambiar el cursor al pasar sobre el botón
+            color: black; // Color de la "X"
+        }
+
+        a {
+            margin: 10px 0;
+            color: black;
+            text-decoration: none;
+            font-size: 20px; // Tamaño de fuente de los enlaces
+            text-align: center; // Asegurarse de que el texto esté centrado
+            width: 100%; // Asegura que el enlace ocupe todo el ancho
+            display: block; // Para que el enlace ocupe toda la línea
+        }
+    }
+}
+
+// Para dispositivos móviles (pantallas menores a 480px)
+@media (max-width: 480px) {
+    .site-header {
+        flex-direction: column; // Cambia a columna para caber en pantallas pequeñas
+        padding: 10px; // Ajusta el espacio de los bordes
+    }
+
+    .logo{
+        align-self: flex-start;
+    }
+    .logo img {
+        width: 70px; // Reduce el tamaño de la imagen del logo
+    }
+
+    .nav-links {
+        display: none; // Oculta el menú en pantallas pequeñas
+    }
+
+    .menu-toggle {
+        display: block; // Muestra el ícono de menú hamburguesa
+        align-self: flex-end;
+        position: absolute;
+        right: 10px;
+        top: 50px;
+    }
+
+    .overlay-content a {
+        font-size: 16px; // Reduce el tamaño de los enlaces en el overlay
+    }
+}
+
+// Para tablets (pantallas menores a 768px)
+@media (max-width: 768px) {
+    .site-header {
+        padding: 15px 10px; // Ajusta el padding
+    }
+
+    .logo img {
+        width: 80px; // Ajusta el tamaño del logo para pantallas medianas
+    }
+
+    .nav-links {
+        display: none; // Muestra el menú en pantallas medianas
+        flex-direction: column; // Cambia la dirección a columna en tabletas
+        align-items: center; // Centra los enlaces
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px; // Espaciado entre los elementos del menú
+    }
+
+    .nav-links li a {
+        font-size: 14px; // Reduce el tamaño de la fuente
+    }
+}
+
+// Para pantallas ultrawide (pantallas mayores a 2560px)
+@media (min-width: 2560px) {
+    .site-header {
+        padding: 20px 50px; // Más espacio en pantallas grandes
+    }
+
+    .logo img {
+        width: 120px; // Aumenta el tamaño del logo en pantallas grandes
+    }
+
+    .nav-links {
+        gap: 40px; // Más espacio entre los elementos del menú
+    }
+
+    .nav-links li a {
+        font-size: 18px; // Aumenta el tamaño de la fuente en pantallas grandes
+    }
+}

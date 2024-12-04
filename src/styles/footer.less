@@ -1,0 +1,92 @@
+.site-footer 
+{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    background-color: #b09c66; 
+    padding: 10px 0; 
+}
+
+.social-icons {
+    display: flex; 
+    gap: 15px; 
+}
+
+
+.social-icons a {
+    font-size: 20px; 
+    color: black; 
+    transition: color 0.3s ease; 
+}
+
+
+.social-icons a:hover {
+    color: azure; 
+}
+
+
+.rights {
+    color: black; 
+    margin-top: 20px; 
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 480px) {
+    .site-footer {
+        padding: 20px 0; /* Ajustar el padding para pantallas más pequeñas */
+    }
+
+    .social-icons {
+        gap: 10px; /* Reduce el espacio entre los iconos */
+    }
+
+    .social-icons a {
+        font-size: 18px; /* Reduce el tamaño de los íconos */
+    }
+
+    .rights {
+        font-size: 14px; /* Reduce el tamaño del texto de derechos */
+        text-align: center; /* Alinea el texto de derechos al centro */
+        margin-top: 15px; /* Menos espacio arriba */
+    }
+}
+
+/* Ajustes para pantallas de tabletas */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 20px 0; /* Ajuste de padding */
+    }
+
+    .social-icons {
+        gap: 12px; /* Reducir el espacio entre los íconos */
+    }
+
+    .social-icons a {
+        font-size: 22px; /* Ajuste en tamaño de los íconos */
+    }
+
+    .rights {
+        font-size: 15px; /* Ajuste en tamaño de los derechos */
+    }
+}
+
+/* Ajustes para pantallas ultra anchas */
+@media (min-width: 2560px) {
+    .site-footer {
+        padding: 20px 0; /* Aumentar el padding en pantallas grandes */
+    }
+
+    .social-icons {
+        gap: 25px; /* Mayor espacio entre los íconos */
+    }
+
+    .social-icons a {
+        font-size: 30px; /* Aumentar el tamaño de los íconos */
+    }
+
+    .rights {
+        font-size: 18px; /* Ajustar el tamaño de los derechos en pantallas grandes */
+    }
+}

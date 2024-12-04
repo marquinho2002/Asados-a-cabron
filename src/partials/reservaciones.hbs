@@ -1,0 +1,36 @@
+<main>
+    <div class="reservaciones">
+        <h1>RESERVA TU LUGAR</h1>
+        <p>Para poder ofrecerte la mejor mesa, selecciona la cantidad de personas, la fecha y el horario de reserva.</p>
+        <form id="form-reserva">
+            <div class="form-group">
+                <label for="tamano-grupo">Tamaño del grupo</label>
+                <select id="tamano-grupo" required>
+                    <option value="2">2 personas</option>
+                    <option value="3">3 personas</option>
+                    <option value="4">4 personas</option>
+                    <option value="5">5 personas</option>
+                    <option value="6">6 personas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="horario">Horario</label>
+                <input type="time" id="horario" required>
+            </div>
+            <button type="button" id="consultar-disponibilidad">Consultar disponibilidad</button>
+        </form>
+        
+        <div class="mensaje-disponibilidad" id="mensaje-disponibilidad" style="display: none;"></div>
+        <div class="horarios-disponibles">
+            <div class="horario">6:00 PM</div>
+            <div class="horario">6:30 PM</div>
+            <div class="horario">7:00 PM</div>
+            <div class="horario">7:30 PM</div>
+        </div>
+        <button class="btn-reservar" onclick="reservar()">Reservar</button>
+    </div>
+</main>

@@ -1,0 +1,106 @@
+/* src/styles/menu.css */
+
+/* Estilos para el menú */
+.special-page .menu-background {
+    background-color: #323232;
+    /* Color gris oscuro */
+    color: #b09c66;
+    /* Cambiar el color del texto a blanco para mayor contraste */
+}
+
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 200px;
+    padding-top: 20px;
+}
+
+
+.description {
+    font-size: 0.9em;
+    color: #b09c66;
+    margin-left: 200px;
+    padding-bottom: 5px;
+
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    padding-top: 20px;
+
+}
+
+.line {
+    border-top: 1px dotted #b09c66;
+    margin: 10px 10px;
+    flex-grow: 1;
+}
+
+
+
+/* Media query para pantallas móviles */
+@media (max-width: 480px) {
+    .menu-item {
+        flex-direction: row; /* Cambiar disposición a columna */
+        align-items: flex-start; /* Alinear elementos al inicio */
+        padding: 5px 10px; /* Reducir padding */
+    }
+
+    .description {
+        margin-left: 0; /* Eliminar márgenes innecesarios */
+        font-size: 0.8em; /* Reducir tamaño de fuente */
+        padding-bottom: 10px;
+    }
+
+    .menu-title {
+        font-size: 1.5em; /* Reducir tamaño del título */
+    }
+
+    .line {
+        margin: 5px 0; /* Reducir margen de la línea */
+    }
+}
+
+/* Media query para tabletas */
+@media (max-width: 768px) {
+    .menu-item {
+        padding: 10px 50px; /* Ajustar padding para tabletas */
+    }
+
+    .description {
+        margin-left: 20px; /* Reducir margen izquierdo */
+        font-size: 0.85em; /* Ajustar tamaño de fuente */
+        padding: 0 30px;
+    }
+
+    .menu-title {
+        font-size: 1.8em; /* Ajustar tamaño del título */
+    }
+
+    .line {
+        margin: 10px 5px; /* Ajustar margen de la línea */
+    }
+}
+
+/* Media query para pantallas ultra anchas */
+@media (min-width: 2560px) {
+    .menu-item {
+        padding: 10px 300px; /* Incrementar padding en ultra anchas */
+    }
+
+    .description {
+        margin-left: 300px; /* Incrementar margen izquierdo */
+        font-size: 1em; /* Aumentar tamaño de fuente */
+    }
+
+    .menu-title {
+        font-size: 3em; /* Aumentar tamaño del título */
+    }
+
+    .line {
+        margin: 20px 15px; /* Incrementar margen de la línea */
+    }
+}
