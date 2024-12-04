@@ -23,41 +23,41 @@
 }
 
 .nav-links li {
-    position: relative; // Necesario para el pseudo-elemento
+    position: relative; 
 }
 
 .nav-links li a {
-    text-decoration: none; // Elimina el subrayado por defecto
+    text-decoration: none; 
     color: black;
     font-size: 16px;
     font-weight: bold;
-    transition: color 0.3s ease; // Transición suave para el color
+    transition: color 0.3s ease; 
 }
 
 .nav-links li a::after {
-    content: ''; // Crea un pseudo-elemento
-    position: absolute; // Posiciona el pseudo-elemento
-    left: 0; // Alinea a la izquierda
-    bottom: -5px; // Posición debajo del texto
-    width: 100%; // Ancho completo
-    height: 2px; // Altura de la línea
-    background-color: black; // Color de la línea
-    transform: scaleX(0); // Comienza con la línea oculta
-    transition: transform 0.3s ease; // Transición suave para la línea
+    content: '';
+    position: absolute; 
+    left: 0; 
+    bottom: -5px; 
+    width: 100%; 
+    height: 2px; 
+    background-color: black; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: azure; // Cambia el color del texto al pasar el mouse
+    color: azure; 
 }
 
 .nav-links li a:hover::after {
-    transform: scaleX(1); // Muestra la línea al pasar el mouse
+    transform: scaleX(1); 
 }
 
 .menu-toggle {
-    display: none; // Oculta por defecto
-    margin-left: auto; // Empuja el ícono hacia la derecha
-    cursor: pointer; // Cambia el cursor al pasar por encima
+    display: none; 
+    margin-left: auto; 
+    cursor: pointer; 
     font-size: 22px;
     margin-right: 20px;
 }
@@ -65,50 +65,50 @@
 .overlay {
     position: fixed;
     top: 0;
-    right: -100%; /* Inicia fuera de la pantalla */
+    right: -100%; 
     width: 100%;
     height: 100%;
-    background-color: rgb(176, 156, 102, 0.9); /* Fondo semitransparente */
+    background-color: rgb(176, 156, 102, 0.9); 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease; /* Transición suave */
+    transition: transform 0.5s ease; 
     z-index: 1000;
-    transform: translateX(100%); /* Fuera de la pantalla */
+    transform: translateX(100%); 
 
     &.active {
-        display: flex; // Mostrar el overlay
-        transform: translateX(-100%); // Deslizar hacia la izquierda
+        display: flex; 
+        transform: translateX(-100%); 
     }
 
     .overlay-content {
         display: flex;
         flex-direction: column;
-        align-items: center; // Centrar horizontalmente
-        justify-content: center; // Centrar verticalmente
+        align-items: center; 
+        justify-content: center; 
         height: 100%;
-        width: 100%; // Asegúrate de que ocupe todo el ancho
+        width: 100%; 
         color: black;
-        position: relative; // Para posicionar el botón de cerrar
+        position: relative; 
 
         .close-button {
-            position: absolute; // Posicionar en relación al contenedor
-            top: 27px; // Espacio desde la parte superior
-            right: 40px; // Espacio desde la derecha
-            font-size: 34px; // Tamaño de la "X"
-            cursor: pointer; // Cambiar el cursor al pasar sobre el botón
-            color: black; // Color de la "X"
+            position: absolute; 
+            top: 27px; 
+            right: 40px;
+            font-size: 34px; 
+            cursor: pointer; 
+            color: black; 
         }
 
         a {
             margin: 10px 0;
             color: black;
             text-decoration: none;
-            font-size: 20px; // Tamaño de fuente de los enlaces
-            text-align: center; // Asegurarse de que el texto esté centrado
-            width: 100%; // Asegura que el enlace ocupe todo el ancho
-            display: block; // Para que el enlace ocupe toda la línea
+            font-size: 20px; 
+            text-align: center; 
+            width: 100%; 
+            display: block; 
         }
     }
 }
@@ -116,23 +116,23 @@
 // Para dispositivos móviles (pantallas menores a 480px)
 @media (max-width: 480px) {
     .site-header {
-        flex-direction: column; // Cambia a columna para caber en pantallas pequeñas
-        padding: 10px; // Ajusta el espacio de los bordes
+        flex-direction: column; 
+        padding: 10px; 
     }
 
     .logo{
         align-self: flex-start;
     }
     .logo img {
-        width: 70px; // Reduce el tamaño de la imagen del logo
+        width: 70px; 
     }
 
     .nav-links {
-        display: none; // Oculta el menú en pantallas pequeñas
+        display: none; 
     }
 
     .menu-toggle {
-        display: block; // Muestra el ícono de menú hamburguesa
+        display: block; 
         align-self: flex-end;
         position: absolute;
         right: 10px;
@@ -140,24 +140,24 @@
     }
 
     .overlay-content a {
-        font-size: 16px; // Reduce el tamaño de los enlaces en el overlay
+        font-size: 16px; 
     }
 }
 
 // Para tablets (pantallas menores a 768px)
 @media (max-width: 768px) {
     .site-header {
-        padding: 15px 10px; // Ajusta el padding
+        padding: 15px 10px; 
     }
 
     .logo img {
-        width: 80px; // Ajusta el tamaño del logo para pantallas medianas
+        width: 80px; 
     }
 
     .nav-links {
-        display: none; // Muestra el menú en pantallas medianas
-        flex-direction: column; // Cambia la dirección a columna en tabletas
-        align-items: center; // Centra los enlaces
+        display: none; 
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .menu-toggle{
@@ -165,29 +165,29 @@
     }
 
     .nav-links li {
-        margin-bottom: 10px; // Espaciado entre los elementos del menú
+        margin-bottom: 10px; 
     }
 
     .nav-links li a {
-        font-size: 14px; // Reduce el tamaño de la fuente
+        font-size: 14px; 
     }
 }
 
 // Para pantallas ultrawide (pantallas mayores a 2560px)
 @media (min-width: 2560px) {
     .site-header {
-        padding: 20px 50px; // Más espacio en pantallas grandes
+        padding: 20px 50px; 
     }
 
     .logo img {
-        width: 120px; // Aumenta el tamaño del logo en pantallas grandes
+        width: 120px; 
     }
 
     .nav-links {
-        gap: 40px; // Más espacio entre los elementos del menú
+        gap: 40px; 
     }
 
     .nav-links li a {
-        font-size: 18px; // Aumenta el tamaño de la fuente en pantallas grandes
+        font-size: 18px; 
     }
 }
